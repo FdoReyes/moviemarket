@@ -11,10 +11,11 @@
 }
 
 #movies {
-    font-size: small;
+    font-size:medium;
     font-weight: bold;
-    color: blue;
-    text-align: start;
+    color: gray;
+    text-align:center;
+    margin-top: 10px;
 }
 
 .col {
@@ -43,9 +44,14 @@ body.movies1 {
 #movieinfo {
     background-color: black;
 }
-
-#aboutmovie, #txtmario, #txtspiderman, #txtelemental {
+ 
+#txtmario, #txtspiderman, #txtelemental {
     color: whitesmoke;
+}
+
+#aboutmovie {
+    color: whitesmoke;
+    margin-top: 10px;
 }
 
 .btn, .btn:hover {

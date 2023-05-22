@@ -1,0 +1,46 @@
+#titulo {
+    text-align: center;
+    color: red;
+}
+
+#movies {
+    font-size: small;
+    font-weight: bold;
+    color: blue;
+    text-align: start;
+}
+
+.col {
+    margin: 10px;
+    padding: 80px;
+}
+
+#movie1 {
+    background-color: darkgrey;
+}
+
+#txtmario {
+    font-size: 35px;
+    margin-top: 250px;
+}
+
+#marioposter1 {
+    padding: 100px;
+}
+
+#aboutmovie, #txtmario {
+    color:dimgray;
+    
+}
+
+.btn, .btn:hover {
+    background-color: indigo;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 50px;
+    color: white;
+}
+
+#btns {
+    text-align: center;
+}

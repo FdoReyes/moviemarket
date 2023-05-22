@@ -1,6 +1,4 @@
-Bienvenido a mi Proyecto Movie market
-
-![Img DaftPunk](img/covers/banner_DaftPunk.jfif)
+# Bienvenido a mi Proyecto Movie market
 
 ### Este sitio web fue mi proyecto final del Curso de Javascript en Coderhouse.
 

@@ -5,6 +5,11 @@
     /* padding: 10px; */
 }
 
+#titulo1 {
+    text-align: center;
+    color:darkgrey;
+}
+
 #movies {
     font-size: small;
     font-weight: bold;

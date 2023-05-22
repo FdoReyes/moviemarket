@@ -5,6 +5,14 @@
     /* padding: 10px; */
 }
 
+.navbar {
+    background-color: grey;
+}
+
+.navbar-text, .navbar-brand, .nav-link {
+    color: whitesmoke;
+}
+
 #titulo1 {
     text-align: center;
     color:darkgrey;

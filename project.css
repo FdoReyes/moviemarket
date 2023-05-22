@@ -1,6 +1,8 @@
 #titulo {
     text-align: center;
-    color: red;
+    color: whitesmoke;
+    background-color: black;
+    /* padding: 10px; */
 }
 
 #movies {
@@ -15,22 +17,30 @@
     padding: 80px;
 }
 
+body.movies1 {
+    background-color:black ;
+}
+
 #movie1 {
     background-color: darkgrey;
 }
 
-#txtmario {
+#txtmario, #txtspiderman, #txtelemental {
     font-size: 35px;
     margin-top: 250px;
 }
 
-#marioposter1 {
+#marioposter, #spidermanposter, #elementalposter {
     padding: 100px;
+    background-color: black;
 }
 
-#aboutmovie, #txtmario {
-    color:dimgray;
-    
+#movieinfo {
+    background-color: black;
+}
+
+#aboutmovie, #txtmario, #txtspiderman, #txtelemental {
+    color: whitesmoke;
 }
 
 .btn, .btn:hover {
@@ -43,4 +53,16 @@
 
 #btns {
     text-align: center;
+}
+
+#home {
+    text-align: center;
+}
+
+.fa-house {
+    color: white;
+}
+
+#div {
+    background-color: black;
 }

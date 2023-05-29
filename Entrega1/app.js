@@ -5,4 +5,4 @@ const Actual = 2023;
 
 let edad = Actual - Nacimiento;
 
-alert(nombre + ', tienes' + edad + 'años');
+alert(nombre + ', tienes ' + edad + ' años. ');

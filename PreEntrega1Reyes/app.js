@@ -1,3 +1,4 @@
+//Productos Carrito
 const productos = [
     {nombre: "Super Mario Bros" , precio: 100 },
     {nombre: "Spiderman" , precio: 125 },
@@ -10,6 +11,7 @@ let carrito = []
 
 let select = prompt("¿Desea comprar algun producto si o no?");
 
+//Selecciones usuario 
 while(select !="si" && select !="no"){
     alert ("porfavor ingresa si o no")
     select = prompt("¿Desea comprar algun producto si o no?")
@@ -66,6 +68,9 @@ if (producto == "Super Mario Bros" || producto == "Spiderman" || producto == "Vo
     })
     break;
 }
+//Fin selecciones usuario
 
+
+//Total de la compra junto con detalle de cada producto.
 const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
 alert(`el total a pagar por su compra es: ${total}`)

@@ -54,16 +54,14 @@ body.movies1 {
     margin-top: 250px;
 }
 
-#marioposter, #spidermanposter, #elementalposter  {
+#marioposter, #spidermanposter, #elementalposter, #btfposter, #starwarsposter {
     padding: 100px;
+    background-color: black;
 }
 
-#bttfposter {
-    height: 5rem;
-    width: 5rem;
-}
-
-#movieinfo {
+.poster4, .poster5 {
+    width: 509px;
+    height: 755px;
 }
  
 #txtmario, #txtspiderman, #txtelemental {

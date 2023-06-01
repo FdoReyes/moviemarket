@@ -6,11 +6,15 @@
 }
 
 .navbar {
-    background-color: grey;
+    background-color:dimgray;
 }
 
 .navbar-text, .navbar-brand, .nav-link {
-    color: whitesmoke;
+    color: white;
+}
+
+.start {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(67,67,67,1) 100%);
 }
 
 #titulo1 {
@@ -18,10 +22,16 @@
     color:darkgrey;
 }
 
+.playlogo {
+    width: 45x;
+    height: 35px;
+    margin-right: 15px;
+}
+
 #movies {
     font-size:medium;
     font-weight: bold;
-    color: gray;
+    color: white;
     text-align:center;
     margin-top: 10px;
 }
@@ -44,13 +54,16 @@ body.movies1 {
     margin-top: 250px;
 }
 
-#marioposter, #spidermanposter, #elementalposter {
+#marioposter, #spidermanposter, #elementalposter  {
     padding: 100px;
-    background-color: black;
+}
+
+#bttfposter {
+    height: 5rem;
+    width: 5rem;
 }
 
 #movieinfo {
-    background-color: black;
 }
  
 #txtmario, #txtspiderman, #txtelemental {

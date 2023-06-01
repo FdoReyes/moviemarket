@@ -28,6 +28,11 @@
     margin-right: 15px;
 }
 
+.poster {
+    width: 196px;
+    height: 282px;
+}
+
 #movies {
     font-size:medium;
     font-weight: bold;

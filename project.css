@@ -84,12 +84,30 @@ body.movies1 {
     margin-top: 10px;
 }
 
-.btn, .btn:hover {
+.btn-1 {
     background-color: indigo;
     margin-top: 50px;
     margin-left: 10px;
     margin-right: 50px;
     color: white;
+}
+
+.btn-1:hover {
+    background-color: indigo;
+    color: #BDB0D9;  
+}
+
+.btn-2 {
+    background-color: indigo;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 50px;
+    color: white;
+}
+
+.btn-2:hover {
+    background-color: indigo;
+    color: #BDB0D9;  
 }
 
 #btns {

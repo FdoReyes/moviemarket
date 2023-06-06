@@ -7,20 +7,22 @@
 
 /*Index*/
 .navbar {
-    background-color:dimgray;
+    background-color: dimgray;
 }
 
-.navbar-text, .navbar-brand, .nav-link {
+.navbar-text,
+.navbar-brand,
+.nav-link {
     color: white;
 }
 
 .start {
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(67,67,67,1) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(67, 67, 67, 1) 100%);
 }
 
 #titulo1 {
     text-align: center;
-    color:darkgrey;
+    color: darkgrey;
 }
 
 .playlogo {
@@ -34,11 +36,17 @@
     height: 282px;
 }
 
+.poster:hover {
+    transform: scale(1.2);
+    filter: grayscale(80%);
+}
+
+
 #movies {
-    font-size:medium;
+    font-size: medium;
     font-weight: bold;
     color: white;
-    text-align:center;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -48,18 +56,35 @@
 }
 
 body.movies1 {
-    background-color:black ;
+    background-color: black;
 }
 
 #movie1 {
     background-color: darkgrey;
 }
 
+.btnindex {
+    text-align: center;
+
+}
+
+.btn-3 {
+    background-color: indigo;
+    color: whitesmoke;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn-3:hover {
+    background-color: indigo;
+    color: #BDB0D9;
+}
+
 /*fin Index*/
 
 /*Paginas Peliculas*/
 #movieinfo {
- margin-left: -100px;
+    margin-left: -100px;
 }
 
 
@@ -69,12 +94,22 @@ body.movies1 {
     color: whitesmoke;
 }
 
-#marioposter, #spidermanposter, #elementalposter, 
-#btfposter, #starwarsposter, #jokerposter, #scarfaceposter, #infinitywarposter {
+#marioposter,
+#spidermanposter,
+#elementalposter,
+#btfposter,
+#starwarsposter,
+#jokerposter,
+#scarfaceposter,
+#infinitywarposter {
     padding: 100px;
 }
 
-.poster4, .poster5, .poster6, .poster7, .poster8 {
+.poster4,
+.poster5,
+.poster6,
+.poster7,
+.poster8 {
     width: 509px;
     height: 755px;
 }
@@ -94,7 +129,7 @@ body.movies1 {
 
 .btn-1:hover {
     background-color: indigo;
-    color: #BDB0D9;  
+    color: #BDB0D9;
 }
 
 .btn-2 {
@@ -107,7 +142,7 @@ body.movies1 {
 
 .btn-2:hover {
     background-color: indigo;
-    color: #BDB0D9;  
+    color: #BDB0D9;
 }
 
 #btns {
@@ -125,4 +160,5 @@ body.movies1 {
 #div {
     background-color: black;
 }
+
 /*Paginas Peliculas*/

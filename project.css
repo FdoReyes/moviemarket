@@ -5,6 +5,7 @@
     /* padding: 10px; */
 }
 
+/*Index*/
 .navbar {
     background-color:dimgray;
 }
@@ -54,23 +55,28 @@ body.movies1 {
     background-color: darkgrey;
 }
 
-#txtmario, #txtspiderman, #txtelemental {
+/*fin Index*/
+
+/*Paginas Peliculas*/
+#movieinfo {
+ margin-left: -100px;
+}
+
+
+#txtposter {
     font-size: 35px;
     margin-top: 250px;
+    color: whitesmoke;
 }
 
-#marioposter, #spidermanposter, #elementalposter, #btfposter, #starwarsposter {
+#marioposter, #spidermanposter, #elementalposter, 
+#btfposter, #starwarsposter, #jokerposter, #scarfaceposter, #infinitywarposter {
     padding: 100px;
-    background-color: black;
 }
 
-.poster4, .poster5 {
+.poster4, .poster5, .poster6, .poster7, .poster8 {
     width: 509px;
     height: 755px;
-}
- 
-#txtmario, #txtspiderman, #txtelemental {
-    color: whitesmoke;
 }
 
 #aboutmovie {
@@ -101,3 +107,4 @@ body.movies1 {
 #div {
     background-color: black;
 }
+/*Paginas Peliculas*/

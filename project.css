@@ -172,4 +172,20 @@ body.movies1 {
     background-color: black;
 }
 
-/*Paginas Peliculas*/
+/*Fin Paginas Peliculas*/
+
+/*Pagina Contacto*/
+
+.contact {
+    background-color: black;
+}
+
+.txtcontact {
+    color: whitesmoke;
+}
+
+label {
+    color: whitesmoke;
+}
+
+/*Fin Pagina Contacto*/

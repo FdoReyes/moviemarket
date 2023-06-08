@@ -177,7 +177,7 @@ body.movies1 {
 /*Pagina Contacto*/
 
 .contact {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(67, 67, 67, 1) 100%);
+    background-color: black;
 }
 
 .txtcontact {

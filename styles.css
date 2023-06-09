@@ -91,7 +91,17 @@ body.movies1 {
     color: #BDB0D9;
 }
 
+.fdosite {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.fdosite:hover {
+    text-decoration: none;
+    color: skyblue;
+}
 /*fin Index*/
+
 
 /*Paginas Peliculas*/
 #movieinfo {

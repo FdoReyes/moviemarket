@@ -23,9 +23,14 @@
 }
 
 .navbar a:hover{
-   color: indigo;
+   color: none;
 }
 
+.txtlogo {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: larger;
+}
 
 .start {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(67, 67, 67, 1) 100%);

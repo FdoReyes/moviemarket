@@ -23,7 +23,7 @@
 }
 
 .navbar a:hover{
-   color: none;
+color: none;
 }
 
 .txtlogo {
@@ -66,6 +66,10 @@
     margin-top: 10px;
 }
 
+#btns {
+    margin-left: 55px;
+}
+
 .col {
     margin: 10px;
     padding: 80px;
@@ -87,8 +91,6 @@ body.movies1 {
 .btn-3 {
     background-color: indigo;
     color: whitesmoke;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .btn-3:hover {

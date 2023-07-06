@@ -10,7 +10,7 @@ class BaseDeDatos {
         this.agregarPelicula(5, "Star Wars", 25, "Pelicula", "starwars.jpg");
         this.agregarPelicula(6, "Joker", 100, "Pelicula", "joker.jpg");
         this.agregarPelicula(7, "Scarface", 50, "Pelicula", "scarface.jpg");
-        this.agregarPelicula(1, "Avengers", 100, "Pelicula", "infinitywar.jpg");
+        this.agregarPelicula(8, "Avengers", 100, "Pelicula", "infinitywar.jpg");
     }
 
     // Método para crear el objeto pelicula y se almacena en el array con un push

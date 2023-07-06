@@ -84,7 +84,7 @@ class Carrito {
             <h2>${pelicula.nombre}</h2>
             <p>$${pelicula.precio}</p>
             <p>Cantidad: ${pelicula.cantidad}</p>
-            <a href="#" data-id="${pelicula.id}" class="btnQuitar">Quitar del carrito</a>
+            <a href="#" data-id="${pelicula.id}" class="btnQuitar"> Eliminar</a>
             </div>
             `;
 

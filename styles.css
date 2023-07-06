@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #d96927;
+    background-color: #360029;
 }
 
 /*Index*/
@@ -39,12 +39,12 @@ section h1 {
     cursor: pointer;
     color: white;
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
-    background: url("img/cart.png") center center no-repeat blue;
+    background: url("img/cart.png") center center no-repeat #E600A1;
 }
 
 section h1 span {
     display: block;
-    background-color: red;
+    background-color: indigo;
     border-radius: 150px;
     padding: 5px;
     width: 30px;
@@ -62,14 +62,14 @@ section h1 span {
 .btnAgregar,
 .btnQuitar {
   color: white;
-  background-color: blue;
+  background-color: indigo;
   text-decoration: none;
   display: inline-block;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
   margin: 10px 0;
-  border: 1px solid blue;
+  border: 1px solid #FF00B2;
 }
 
 .btnAgregar:hover,
@@ -99,6 +99,7 @@ section h1 span {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height: auto;
+    color: whitesmoke;
   }
 
 
@@ -112,7 +113,7 @@ section h1 span {
   .pelicula .precio {
     padding: 10px 0;
     font-size: 20px;
-    background-color: red;
+    background-color: #800059;
     display: inline-block;
     padding: 4px 10px;
     color: white;
@@ -140,6 +141,10 @@ section h1 span {
   .pelicula:hover {
     border: 1px solid black;
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .pelicula h2 {
+    font-size: 20px;
   }
 
 /*fin Index*/

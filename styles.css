@@ -1,112 +1,147 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
   }
 
-
-#titulo {
-    text-align: center;
-    color: whitesmoke;
-   background-color: black;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d96927;
 }
 
 /*Index*/
-.navbar {
-    background-color: dimgray;
+main {
+    width: 60%;
+    margin: auto;
+    padding: 20px 0 0 0;
 }
 
-.navbar a{
-    color: #fff;
+section {
+    position: fixed;
+    box-shadow: -6px -2px 25px -13px rgba(0, 0, 0, 0.15);
+    width: 340px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    transition: all 0.2s;
+    background-color: white;
 }
 
-.navbar a:hover{
-color: none;
-}
-
-.txtlogo {
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: larger;
-}
-
-.start {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(67, 67, 67, 1) 100%);
-}
-
-#titulo1 {
-    text-align: center;
-    color: darkgrey;
-}
-
-.playlogo {
-    width: 45x;
-    height: 35px;
-    margin-right: 15px;
-}
-
-.poster {
-    width: 196px;
-    height: 282px;
-}
-
-.poster:hover {
-    transform: scale(1.2);
-    filter: grayscale(80%);
-}
-
-
-#movies {
-    font-size: medium;
-    font-weight: bold;
+section h1 {
+    position: absolute;
+    top: 20px;
+    right: 360px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
     color: white;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+    background: url("img/cart.png") center center no-repeat blue;
+}
+
+section h1 span {
+    display: block;
+    background-color: red;
+    border-radius: 150px;
+    padding: 5px;
+    width: 30px;
     text-align: center;
-    margin-top: 10px;
-}
+    font-size: 14px;
+    margin: -10px 0 0 30px;
+  }
 
-#btns {
-    margin-left: 55px;
-}
-
-.col {
-    margin: 10px;
-    padding: 80px;
-}
-
-body.movies1 {
-    background-color: black;
-}
-
-#movie1 {
-    background-color: darkgrey;
-}
-
-.btnindex {
+  section h3 {
+    padding-top: 10px;
     text-align: center;
+    font-size: 30px;
+  }
 
+.btnAgregar,
+.btnQuitar {
+  color: white;
+  background-color: blue;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  border: 1px solid blue;
 }
 
-.btn-3 {
-    background-color: indigo;
-    color: whitesmoke;
+.btnAgregar:hover,
+.btnQuitar:hover {
+  border: 1px solid white;
 }
 
-.btn-3:hover {
-    background-color: indigo;
-    color: #BDB0D9;
-}
+.peliculaCarrito {
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
 
-.fdosite {
-    text-decoration: none;
-    color: whitesmoke;
-}
+  .peliculaCarrito h2 {
+    margin-bottom: 8px;
+  }
 
-.fdosite:hover {
-    text-decoration: none;
-    color: skyblue;
-}
+  .ocultar {
+    right: -340px;
+    transition: all 0.2s;
+  }
+
+  #peliculas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: auto;
+  }
+
+
+  .pelicula {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
+  .pelicula .precio {
+    padding: 10px 0;
+    font-size: 20px;
+    background-color: red;
+    display: inline-block;
+    padding: 4px 10px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 4px;
+  }
+
+  .pelicula .imagen {
+    display: flex;
+    justify-content: center;
+    min-height: 160px;
+    margin: 20px 0;
+  }
+
+  .pelicula .imagen img {
+    max-height: 200px;
+  }
+
+  .pelicula .btnAgregar {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .pelicula:hover {
+    border: 1px solid black;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  }
+
 /*fin Index*/
 
 
@@ -186,6 +221,7 @@ body.movies1 {
 }
 
 /*Fin Paginas Peliculas*/
+
 
 /*Pagina Contacto*/
 

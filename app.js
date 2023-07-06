@@ -3,11 +3,11 @@
 class BaseDeDatos {
     constructor() {
         this.peliculas = [];
-        this.agregarPelicula(1, "Mariobros", 100, "Pelicula", "mariobrosmovie.jpg");
+        this.agregarPelicula(1, "Mario Bros", 100, "Pelicula", "mariobrosmovie.jpg");
         this.agregarPelicula(2, "Spiderman", 100, "Pelicula", "spidermanspiderverse.jpg");
         this.agregarPelicula(3, "Elemental", 100, "Pelicula", "elemental.jpg");
-        this.agregarPelicula(4, "Volveralfuturo", 50, "Pelicula", "bttf.jpg");
-        this.agregarPelicula(5, "Starwars", 25, "Pelicula", "starwars.jpg");
+        this.agregarPelicula(4, "Volver al futuro", 50, "Pelicula", "bttf.jpg");
+        this.agregarPelicula(5, "Star Wars", 25, "Pelicula", "starwars.jpg");
         this.agregarPelicula(6, "Joker", 100, "Pelicula", "joker.jpg");
         this.agregarPelicula(7, "Scarface", 50, "Pelicula", "scarface.jpg");
         this.agregarPelicula(1, "Avengers", 100, "Pelicula", "infinitywar.jpg");
@@ -139,8 +139,26 @@ function cargarPeliculas(peliculas) {
         <div class="imagen">
             <img src="img/${pelicula.imagen}" />
         </div>
-            <a href="#" class="btnAgregar" data-id="${pelicula.id}"> agregar al carrito</a>
+            <a href="#" class="btnAgregar" data-id="${pelicula.id}"> Agregar</a>
         </div>
         `;
     }
+
+    const botonesAgregar = document.querySelectorAll(".btnAgregar");
+    for (const boton of botonesAgregar) {
+        boton.addEventListener("click", event => {
+            event.preventDefault();
+            const id = Number(boton.dataset.id);
+            const pelicula = bd.registroporId(id);
+            carrito.agregar(pelicula);
+        });
+    }
 }
+
+//Trigger para ocultar/mostrar el carrito 
+botonCarrito.addEventListener("click", (event) => {
+    document.querySelector("section").classList.toggle("ocultar");
+});
+
+const carrito = new Carrito;
+

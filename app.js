@@ -88,9 +88,59 @@ class Carrito {
             </div>
             `;
 
-        
             this.total += pelicula.precio * pelicula.cantidad;
             this.totalPeliculas += pelicula.cantidad;
         }
+
+        const botonesQuitar = document.querySelectorAll(".btnQuitar");
+        for (const boton of botonesQuitar) {
+            boton.onclick = (event) => {
+                event.preventDefault();
+                this.quitar(Number(boton.dataset.id));
+            }
+        }
+
+        spanCantidadPeliculas.innerText = this.totalPeliculas;
+        spanTotalCarrito.innerText = this.total;
+    }
+}
+
+class Pelicula {
+    constructor(id, nombre, precio, categoria, imagen = false) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+        this.imagen = imagen;
+    }
+}
+
+//Objeto de la base de datos
+const bd = new BaseDeDatos();
+
+
+//Elementos
+const divPeliculas = document.querySelector("#peliculas");
+const divCarrito = document.querySelector("#carrito");
+const spanCantidadPeliculas = document.querySelector("#cantidadPeliculas");
+const spanTotalCarrito = document.querySelector("#totalCarrito");
+const botonCarrito = document.querySelector("section h1");
+
+cargarPeliculas(bd.traerRegistros());
+
+function cargarPeliculas(peliculas) {
+    divPeliculas.innerHTML = "";
+
+    for (const pelicula of peliculas) {
+        divPeliculas.innerHTML += `
+        <div class="pelicula"> 
+        <h2>${pelicula.nombre}</h2>
+        <p class="precio">$${pelicula.precio}</p>
+        <div class="imagen">
+            <img src="img/${pelicula.imagen}" />
+        </div>
+            <a href="#" class="btnAgregar" data-id="${pelicula.id}"> agregar al carrito</a>
+        </div>
+        `;
     }
 }

@@ -10,6 +10,11 @@ body {
 }
 
 /*Index*/
+.navbar {
+  background-color: black;
+}
+
+
 main {
     width: 60%;
     margin: auto;

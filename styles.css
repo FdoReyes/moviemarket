@@ -147,6 +147,16 @@ section h1 span {
     font-size: 20px;
   }
 
+  /*enlace sitio web Fdo*/
+  .fdosite {
+    text-decoration: none;
+    color: white;
+  }
+
+  .fdosite:hover {
+    color: #FF00B2;
+  }
+
 /*fin Index*/
 
 

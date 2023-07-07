@@ -61,6 +61,16 @@ class Carrito {
 
         localStorage.setItem("carrito", JSON.stringify(this.carrito));
         this.listar();
+        Toastify({
+            text: `${pelicula.nombre} agregado al carrito`,
+            duration: 2000,
+            className: "info",
+            gravity: "",
+            position: "center",
+            style: {
+            background: "linear-gradient(to right, #8360c3, #2ebf91)",
+            },
+          }).showToast();
     }
 
     quitar(id) {

@@ -65,7 +65,7 @@ class Carrito {
             text: `${pelicula.nombre} agregado al carrito`,
             duration: 2000,
             className: "info",
-            gravity: "",
+            gravity: "top",
             position: "center",
             style: {
             background: "linear-gradient(to right, #8360c3, #2ebf91)",
@@ -84,6 +84,12 @@ class Carrito {
         localStorage.setItem("carrito", JSON.stringify(this.carrito));
     }
 
+    vaciar() {
+        this.carrito = [];
+        localStorage.removeItem("carrito");
+        this.listar();
+    }
+
     listar() {
         this.total = 0;
         this.totalPeliculas = 0;
@@ -94,12 +100,18 @@ class Carrito {
             <h2>${pelicula.nombre}</h2>
             <p>$${pelicula.precio}</p>
             <p>Cantidad: ${pelicula.cantidad}</p>
-            <a href="#" data-id="${pelicula.id}" class="btnQuitar"> Eliminar</a>
+            <a href="#" data-id="${pelicula.id}" class="btn btnQuitar"> Eliminar</a>
             </div>
             `;
-
+            // Actualizamos los totales
             this.total += pelicula.precio * pelicula.cantidad;
             this.totalPeliculas += pelicula.cantidad;
+        }
+
+        if (this.totalPeliculas > 0) {
+            botonComprar.classList.remove("oculto"); //se muestra el botón
+        } else {
+            botonComprar.classList.add("oculto"); //se oculta el botón
         }
 
         const botonesQuitar = document.querySelectorAll(".btnQuitar");
@@ -107,7 +119,7 @@ class Carrito {
             boton.onclick = (event) => {
                 event.preventDefault();
                 this.quitar(Number(boton.dataset.id));
-            }
+            };
         }
 
         spanCantidadPeliculas.innerText = this.totalPeliculas;
@@ -135,6 +147,7 @@ const divCarrito = document.querySelector("#carrito");
 const spanCantidadPeliculas = document.querySelector("#cantidadPeliculas");
 const spanTotalCarrito = document.querySelector("#totalCarrito");
 const botonCarrito = document.querySelector("section h1");
+const botonComprar = document.querySelector("#botonComprar");
 
 cargarPeliculas(bd.traerRegistros());
 
@@ -149,7 +162,7 @@ function cargarPeliculas(peliculas) {
         <div class="imagen">
             <img src="img/${pelicula.imagen}" />
         </div>
-            <a href="#" class="btnAgregar" data-id="${pelicula.id}"> Agregar</a>
+            <a href="#" class="btn btnAgregar" data-id="${pelicula.id}"> Agregar</a>
         </div>
         `;
     }
@@ -165,9 +178,22 @@ function cargarPeliculas(peliculas) {
     }
 }
 
-//Trigger para ocultar/mostrar el carrito 
+//Toggle para ocultar/mostrar el carrito 
 botonCarrito.addEventListener("click", (event) => {
     document.querySelector("section").classList.toggle("ocultar");
+});
+
+botonComprar.addEventListener("click", (event) => {
+    event.preventDefault();
+    Swal.fire({
+        title: "Sus peliculas estan agregadas",
+        text: "Su compra ha sido realizada con éxito!",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+    });
+
+    carrito.vaciar();
+    document.querySelector("section").classList.add("ocultar");
 });
 
 const carrito = new Carrito;

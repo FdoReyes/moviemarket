@@ -31,7 +31,8 @@ section {
 }
 
 #scroll {
-  overflow-y: scroll;
+  overflow-y: auto;
+  height: 100%;
 }
 
 section h1 {

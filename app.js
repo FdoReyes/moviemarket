@@ -3,19 +3,19 @@
 class BaseDeDatos {
     constructor() {
         this.peliculas = [];
-        this.agregarPelicula(1, "Mario Bros", 100, "Pelicula", "mariobrosmovie.jpg");
-        this.agregarPelicula(2, "Spiderman", 100, "Pelicula", "spidermanspiderverse.jpg");
-        this.agregarPelicula(3, "Elemental", 100, "Pelicula", "elemental.jpg");
-        this.agregarPelicula(4, "Volver al futuro", 50, "Pelicula", "bttf.jpg");
-        this.agregarPelicula(5, "Star Wars", 25, "Pelicula", "starwars.jpg");
-        this.agregarPelicula(6, "Joker", 100, "Pelicula", "joker.jpg");
-        this.agregarPelicula(7, "Scarface", 50, "Pelicula", "scarface.jpg");
-        this.agregarPelicula(8, "Avengers", 100, "Pelicula", "infinitywar.jpg");
+        this.agregarPelicula(1, "Mario Bros", 100, "Pelicula", "mariobrosmovie.jpg", "movie.html");
+        this.agregarPelicula(2, "Spiderman", 100, "Pelicula", "spidermanspiderverse.jpg", "movie2.html");
+        this.agregarPelicula(3, "Elemental", 100, "Pelicula", "elemental.jpg", "movie3.html");
+        this.agregarPelicula(4, "Volver al futuro", 50, "Pelicula", "bttf.jpg", "movie4.html");
+        this.agregarPelicula(5, "Star Wars", 25, "Pelicula", "starwars.jpg", "movie5.html");
+        this.agregarPelicula(6, "Joker", 100, "Pelicula", "joker.jpg", "movie6.html");
+        this.agregarPelicula(7, "Scarface", 50, "Pelicula", "scarface.jpg", "movie7.html");
+        this.agregarPelicula(8, "Avengers", 100, "Pelicula", "infinitywar.jpg", "movie8.html");
     }
 
     // Método para crear el objeto pelicula y se almacena en el array con un push
-    agregarPelicula(id, nombre, precio, categoria, imagen) {
-        const pelicula = new Pelicula(id, nombre, precio, categoria, imagen);
+    agregarPelicula(id, nombre, precio, categoria, imagen, sinopsis) {
+        const pelicula = new Pelicula(id, nombre, precio, categoria, imagen, sinopsis);
         this.peliculas.push(pelicula);
     }
 
@@ -128,10 +128,11 @@ class Carrito {
 }
 
 class Pelicula {
-    constructor(id, nombre, precio, categoria, imagen = false) {
+    constructor(id, nombre, precio, categoria, imagen = false, sinopsis) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
+        this.sinopsis = sinopsis;
         this.categoria = categoria;
         this.imagen = imagen;
     }
@@ -158,6 +159,7 @@ function cargarPeliculas(peliculas) {
         divPeliculas.innerHTML += `
         <div class="pelicula"> 
         <h2>${pelicula.nombre}</h2>
+        <p class="sinopsis"><a class="movie" href="pages/${pelicula.sinopsis}">Ver sinopsis</a></p>
         <p class="precio">$${pelicula.precio}</p>
         <div class="imagen">
             <img src="img/${pelicula.imagen}" />

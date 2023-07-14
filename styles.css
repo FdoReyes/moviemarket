@@ -75,7 +75,7 @@ section h1 span {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
-  border: 1px solid #FF00B2;
+  border: 1px solid #ff00b2;
   margin: 10px auto;
   display: block;
   text-align: center;
@@ -123,6 +123,16 @@ section h1 span {
     padding: 10px;
   }
 
+/*Enlace sinopsis peliculas*/
+  .movie {
+    text-decoration: none;
+    color: #DE3162;
+  }
+  .movie:hover{
+    color: #2BA80C;
+  }
+
+ /*Fin enlace sinopsis peliculas*/ 
 
   .pelicula .precio {
     padding: 10px 0;

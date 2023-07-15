@@ -239,9 +239,13 @@ section h1 span {
 #jokerposter,
 #scarfaceposter,
 #infinitywarposter {
-    padding: 100px;
+  padding: 100px;
 }
 
+
+.poster1,
+.poster2,
+.poster3,
 .poster4,
 .poster5,
 .poster6,
@@ -249,6 +253,7 @@ section h1 span {
 .poster8 {
     width: 509px;
     height: 755px;
+    box-shadow: 0px 0px 20px 0px gold;
 }
 
 #aboutmovie {
@@ -288,10 +293,6 @@ section h1 span {
 
 .fa-house {
     color: white;
-}
-
-#div {
-    background-color: black;
 }
 
 /*Fin Paginas Peliculas*/

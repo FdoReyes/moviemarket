@@ -9,6 +9,35 @@ body {
     background-color: #360029;
 }
 
+/*Navbar*/
+
+.logosp {
+  margin: auto;
+}
+.txtlogo {
+  text-decoration: none;
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+#mi-menu {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.navbar {
+  background-color: #33001A;
+}
+
+.nav-link {
+  color: whitesmoke;
+}
+
+.nav-link:hover {
+  color: #E600A1;
+}
+/* Fin Navbar*/
+
 /*Index*/
 main {
     width: 60%;

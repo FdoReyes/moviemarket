@@ -311,4 +311,12 @@ label {
     color: whitesmoke;
 }
 
+.btn-send {
+  background-color: indigo;
+  color: whitesmoke;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 28px;
+}
+
 /*Fin Pagina Contacto*/

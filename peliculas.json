@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mario Bros",
+        "precio": 100,
+        "categoria": "Animación",
+        "imagen": "mariobrosmovie.jpg",
+        "sinopsis": "movie.html"
+      },
+      {
+        "id": 2,
+        "nombre": "Spiderman",
+        "precio": 100,
+        "categoria": "Aventura",
+        "imagen": "spidermanspiderverse.jpg",
+        "sinopsis": "movie2.html"
+      },
+      {
+        "id": 3,
+        "nombre": "Elemental",
+        "precio": 100,
+        "categoria": "Animación",
+        "imagen": "elemental.jpg",
+        "sinopsis": "movie3.html"
+      },
+      {
+        "id": 4,
+        "nombre": "Volver al Futuro",
+        "precio": 50,
+        "categoria": "Ciencia Ficción",
+        "imagen": "bttf.jpg",
+        "sinopsis": "movie4.html"
+      },
+      {
+        "id": 5,
+        "nombre": "Star Wars",
+        "precio": 25,
+        "categoria": "Fantasia",
+        "imagen": "starwars.jpg",
+        "sinopsis": "movie5.html"
+      },
+      {
+        "id": 6,
+        "nombre": "Joker",
+        "precio": 100,
+        "categoria": "Drama",
+        "imagen": "joker.jpg",
+        "sinopsis": "movie6.html"
+      },
+      {
+        "id": 7,
+        "nombre": "Scarface",
+        "precio": 50,
+        "categoria": "Crimen",
+        "imagen": "scarface.jpg",
+        "sinopsis": "movie7.html"
+      },
+      {
+        "id": 8,
+        "nombre": "Avenger",
+        "precio": 100,
+        "categoria": "Acción",
+        "imagen": "infinitywar.jpg",
+        "sinopsis": "movie8.html"
+      }
+
+]

@@ -6,7 +6,7 @@ class BaseDeDatos {
     }
 
  async traerRegistros() {
-    const response = await fetch ("/peliculas.json");
+    const response = await fetch ("peliculas.json");
     this.peliculas = await response.json();
     return this.peliculas;
  }  

@@ -1,4 +1,4 @@
-# Bienvenido a mi Proyecto Movie market
+# Bienvenido a mi Proyecto Movie Market
 
 ### Este sitio web fue mi proyecto final del Curso de Javascript en Coderhouse.
 

@@ -3,26 +3,18 @@
 class BaseDeDatos {
     constructor() {
         this.peliculas = [];
-        this.agregarPelicula(1, "Mario Bros", 100, "Pelicula", "mariobrosmovie.jpg", "movie.html");
-        this.agregarPelicula(2, "Spiderman", 100, "Pelicula", "spidermanspiderverse.jpg", "movie2.html");
-        this.agregarPelicula(3, "Elemental", 100, "Pelicula", "elemental.jpg", "movie3.html");
-        this.agregarPelicula(4, "Volver al futuro", 50, "Pelicula", "bttf.jpg", "movie4.html");
-        this.agregarPelicula(5, "Star Wars", 25, "Pelicula", "starwars.jpg", "movie5.html");
-        this.agregarPelicula(6, "Joker", 100, "Pelicula", "joker.jpg", "movie6.html");
-        this.agregarPelicula(7, "Scarface", 50, "Pelicula", "scarface.jpg", "movie7.html");
-        this.agregarPelicula(8, "Avengers", 100, "Pelicula", "infinitywar.jpg", "movie8.html");
     }
+
+ async traerRegistros() {
+    const response = await fetch ("/peliculas.json");
+    this.peliculas = await response.json();
+    return this.peliculas;
+ }  
 
     // Método para crear el objeto pelicula y se almacena en el array con un push
     agregarPelicula(id, nombre, precio, categoria, imagen, sinopsis) {
         const pelicula = new Pelicula(id, nombre, precio, categoria, imagen, sinopsis);
         this.peliculas.push(pelicula);
-    }
-
-    //Retorna el array con todas las peliculas de la base de datos
-
-    traerRegistros() {
-        return this.peliculas;
     }
 
 
@@ -34,6 +26,9 @@ class BaseDeDatos {
     registrosPorNombre(palabra) {
         return this.peliculas.filter((pelicula) => pelicula.nombre.toLowerCase().includes(palabra));
     }
+    registrosPorCategoria(categoria) {
+        return this.peliculas.filter((pelicula) => pelicula.categoria == categoria);
+      }
 }
 
 
@@ -149,8 +144,26 @@ const spanCantidadPeliculas = document.querySelector("#cantidadPeliculas");
 const spanTotalCarrito = document.querySelector("#totalCarrito");
 const botonCarrito = document.querySelector("section h1");
 const botonComprar = document.querySelector("#botonComprar");
+const botonesCategorias = document.querySelectorAll(".btnCategoria");
 
-cargarPeliculas(bd.traerRegistros());
+botonesCategorias.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      boton.classList.add("seleccionado");
+      const peliculasPorCategoria = bd.registrosPorCategoria(boton.innerText);
+      cargarPeliculas(peliculasPorCategoria);
+    });
+  });
+
+
+  const botonTodos = document.querySelector("#btnTodos");
+botonTodos.addEventListener("click", (event) => {
+  event.preventDefault();
+  cargarPeliculas(bd.peliculas);
+});
+
+bd.traerRegistros().then((peliculas) => cargarPeliculas(peliculas));
+
 
 function cargarPeliculas(peliculas) {
     divPeliculas.innerHTML = "";

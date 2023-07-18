@@ -142,6 +142,7 @@ const divPeliculas = document.querySelector("#peliculas");
 const divCarrito = document.querySelector("#carrito");
 const spanCantidadPeliculas = document.querySelector("#cantidadPeliculas");
 const spanTotalCarrito = document.querySelector("#totalCarrito");
+const inputBuscar = document.querySelector("#inputBuscar");
 const botonCarrito = document.querySelector("section h1");
 const botonComprar = document.querySelector("#botonComprar");
 const botonesCategorias = document.querySelectorAll(".btnCategoria");
@@ -156,7 +157,7 @@ botonesCategorias.forEach((boton) => {
   });
 
 
-  const botonTodos = document.querySelector("#btnTodos");
+const botonTodos = document.querySelector("#btnTodos");
 botonTodos.addEventListener("click", (event) => {
   event.preventDefault();
   cargarPeliculas(bd.peliculas);
@@ -192,6 +193,12 @@ function cargarPeliculas(peliculas) {
         });
     }
 }
+
+inputBuscar.addEventListener("keyup", () => {
+    const palabra = inputBuscar.value;
+    const peliculasEncontradas = bd.registrosPorNombre(palabra.toLowerCase());
+    cargarPeliculas(peliculasEncontradas);
+  });
 
 //Toggle para ocultar/mostrar el carrito 
 botonCarrito.addEventListener("click", (event) => {

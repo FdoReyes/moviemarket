@@ -45,6 +45,23 @@ main {
     padding: 20px 0 0 0;
 }
 
+main input {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px whitesmoke;
+  font-weight: 100;
+  margin-bottom: 20px;
+  background-color: indigo;
+  color: whitesmoke;
+}
+
+main input::placeholder {
+  color: whitesmoke;
+}
+
 section {
     position: fixed;
     box-shadow: -6px -2px 25px -13px rgba(0, 0, 0, 0.15);
